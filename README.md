@@ -16,3 +16,12 @@
 ### Note on Video Recordings:
 
 - Each partner's individual video recordings can be found in their original submission repository.
+
+### Instructions to the run the code:
+
+- The file data_creation.py can be run to simply download the iris database and save it as a csv
+- python data_creation.py
+- Launch an MLFlow server on your terminal using:
+- mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host 0.0.0.0 --port 5000 --allowed-hosts "*" --cors-allowed-origins "http://localhost:5000, http://127.0.0.1:5000"
+- The file train_model.py can now be run to connect to the server, train, run and register the model
+- python train_model.py
